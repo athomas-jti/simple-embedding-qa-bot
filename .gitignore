@@ -1,0 +1,6 @@
+/env/Lib/site-packages/
+/env/Scripts/
+/env/share/
+__pycache__
+/env/pyvenv.cfg
+/src/questions.log
