@@ -22,7 +22,7 @@ After install you can launch like this to use Python's IDLE in the venv:
 ```bat
 env\Scripts\activate.bat
 
-pip install numpy transformers torch
+cd src
 
 python -m idlelib.idle
 ```
