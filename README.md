@@ -55,9 +55,9 @@ y2 = oracle[x2]
 assert y2 == answers[1].value
 
 # a vector is a vector, so math works on it ...
-center_vector = (x1 + x2)*0.5
+fav_vector = x2*2 - x1
 # ... and given that vector we can find the phrase in the DB that's closest
-center_phrase = oracle[center_vector]
+fav_phrase = oracle[fav_vector]
 ```
 
 Files
