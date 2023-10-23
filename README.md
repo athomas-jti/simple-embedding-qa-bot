@@ -32,26 +32,32 @@ Either way, you can use the data structure kinda like this:
 ```python
 oracle = ExactVectorIndex(vect_from_str)
 
-#stash a question answer pair
+# stash a question answer pair
 oracle['What is the airspeed velocity of an unladen swallow?'] = 'About 25 miles per hour.'
 
-#stash a fact
+# stash a fact
 fact = 'Birds are tetrachromats. Birds see the world in a 4 dimensional color space.'
 oracle[fact] = fact
 
-#get the best answer
+# get the best answer
 print(oracle['tell me about bird vision'])
 
-#get the best N answers
+# get the 7 best answers
 answers = oracle.get_k_nearest('spam', 7)
 print(answers[0].value)
 print(answers[0].distance)
 
-#if you have a vector from somewhere you can use it directly
+# if you have a vector from somewhere you can use it directly
 x1 = vect_from_str('hello')
 y1 = oracle[x1]
 x2 = answers[1].vector
 y2 = oracle[x2]
+assert y2 == answers[1].value
+
+# a vector is a vector, so math works on it ...
+center_vector = (x1 + x2)*0.5
+# ... and given that vector we can find the phrase in the DB that's closest
+center_phrase = oracle[center_vector]
 ```
 
 Files
