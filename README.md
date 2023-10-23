@@ -48,7 +48,7 @@ print(answers[0].value)
 print(answers[0].distance)
 
 #if you have a vector from somewhere you can use it directly
-x1 = vector_from_string_function('hello')
+x1 = vect_from_str('hello')
 y1 = oracle[x1]
 x2 = answers[1].vector
 y2 = oracle[x2]
