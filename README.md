@@ -17,7 +17,7 @@ cd src
 python -i chatbot.py
 ```
 
-After install you can launch like this to use the basice Python IDE:
+After install you can launch like this to use Python's IDLE in the venv:
 
 ```bat
 env\Scripts\activate.bat
